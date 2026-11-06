@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-01",
+  "services": {
+    "order-service": {
+      "name": "OrderService",
+      "path": "../order-service",
+      "port": 5001,
+      "endpoints": [],
+      "calls": [],
+      "filePatterns": {},
+      "language": "dotnet"
+    },
+    "checkout-service": {
+      "name": "CheckoutService",
+      "path": "../checkout-service",
+      "port": 5002,
+      "endpoints": [],
+      "calls": [
+        {
+          "service": "order-service",
+          "endpoint": "POST /api/orders",
+          "clientFile": "Clients/OrderClient.cs",
+          "purpose": "Create an order during checkout"
+        }
+      ],
+      "filePatterns": {},
+      "language": "dotnet"
+    }
+  }
+}

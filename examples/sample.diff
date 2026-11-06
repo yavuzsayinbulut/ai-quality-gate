@@ -1,0 +1,7 @@
+diff --git a/src/Models/Order.cs b/src/Models/Order.cs
+index 1111111..2222222 100644
+--- a/src/Models/Order.cs
++++ b/src/Models/Order.cs
+@@ -4,7 +4,7 @@ public sealed class Order
+-    public decimal TotalAmount { get; init; }
++    public double TotalAmount { get; init; }
